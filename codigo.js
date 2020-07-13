@@ -1,4 +1,3 @@
-/*
 const inputElement = document.querySelector("input");
 
 const btnElement = document.querySelector("button");
@@ -48,4 +47,3 @@ btnElement.onclick = () => {
         repos = [];
         inputElement.value = "";
 }
-*/
