@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const inputElement = document.querySelector("input");
 
 const btnElement = document.querySelector("button");
@@ -18,10 +20,10 @@ async function BuscaApi(user){
     // caso responda com sucesso :
     try{
         const response = await axios.get(`https://api.github.com/users/${user}/repos`);
-        const data = response.data;
+        const {data} = response;
         for(let i = 0; i < data.length; i++){
             // cada repositorio na api é adicionado no vetor repos
-            repos.push(response.data[i].name);
+            repos.push(data[i].name);
         }
         // executa a função para adicionar repositorios na lista
         adcRepos();
@@ -39,10 +41,13 @@ btnElement.onclick = () => {
     const createLi = document.createElement("li");
     ulTag.appendChild(createLi);
     const liElement = document.querySelector("li");
+    
     // cria uma item na lista informando que a consulta esta carregando
     liElement.textContent = "...carregando...";
+
     // inicia a consulta na api
     BuscaApi(inputElement.value)    
+
     // esvazia o vetor de repositorio para uma nova consulta
     repos = [];
     inputElement.value = "";
