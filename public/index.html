@@ -15,18 +15,29 @@
         <ul/>
     </div>
     <script src="./bundle.js"></script> -->
-    <form id="repo-form">
-        <input type="text" name="repository">
-        <button type="submit">Adicionar</button>
-    </form>
-    <ul id="repo-list">
-        <li>
-            <img src="https://avatars0.githubusercontent.com/u/57147101?v=4" alt="avatar-user"><!--avatar_url-->
-            <strong>P-L-T-S</strong><!--login-->
-            <p>aluma coiasa coisa</p> <!--bio-->
-            <a target="_blank" href="https://api.github.com/users/P-L-T-S">Ver mais</a><!--url-->
-        </li>
-    </ul>
+    <div class="repo-container">
+        <h2>Se quiser pesquisar o repositorio de um usuário</h2>
+        <form id="repo-form">
+            <input type="text" id="repo-user" placeholder="Digite o usuario para ser feita a pesquisa de repositorios">
+            <input type="text" id="repository" placeholder="Digite o repositorio q sera exibido">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="repo-list">
+            <li>
+            </li>
+        </ul>
+    </div>
+    <div class="user-container">
+        <h2>Se quiser perquisar um usuário</h2>
+        <form id="user-form">
+            <input type="text" name="user">
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="user-list">
+            <li>
+            </li>
+        </ul>
+    </div>
     <script src="./bundle.js"></script>
 </body>
 </html>
