@@ -1,36 +1,40 @@
-import axios from "axios";
+/* import axios from "axios";
 
 const inputElement = document.querySelector("input");
 
 const btnElement = document.querySelector("button");
 
 let repos = [];
+
 // função para adicionar repositorios na lista
 function adcRepos(){
     const ulTag = document.querySelector("ul");
-    for(let i = 0; i < repos.length; i++){
+
+    repos.map((item, indice) => {
         const createLi = document.createElement("li");
         ulTag.appendChild(createLi);
 
         const liElement = document.querySelectorAll("li");
-        liElement[i].textContent = repos[i];
-    }
+        liElement[indice].textContent = item;
+        
+    })
 }
 async function BuscaApi(user){
     // caso responda com sucesso :
     try{
         const response = await axios.get(`https://api.github.com/users/${user}/repos`);
         const {data} = response;
-        for(let i = 0; i < data.length; i++){
-            // cada repositorio na api é adicionado no vetor repos
-            repos.push(data[i].name);
-        }
+
+        data.map(item => {
+            repos.push(item.name);
+        });
+
         // executa a função para adicionar repositorios na lista
         adcRepos();
     // caso responda com um erro
     }catch(error){
         console.warn(error);
-        alert(error);
+        alert(`Não foi possivel achar ${user}`);
     };
 };
 btnElement.onclick = () => {
@@ -41,9 +45,13 @@ btnElement.onclick = () => {
     const createLi = document.createElement("li");
     ulTag.appendChild(createLi);
     const liElement = document.querySelector("li");
-    
-    // cria uma item na lista informando que a consulta esta carregando
+
+    ulTag.setAttribute("class", "border");
+
+    // cria um item na lista informando que a consulta esta carregando
     liElement.textContent = "...carregando...";
+
+    ulTag.innerHTML = "";
 
     // inicia a consulta na api
     BuscaApi(inputElement.value)    
@@ -51,4 +59,4 @@ btnElement.onclick = () => {
     // esvazia o vetor de repositorio para uma nova consulta
     repos = [];
     inputElement.value = "";
-}
+} */

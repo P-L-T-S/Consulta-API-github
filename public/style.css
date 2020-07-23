@@ -1,4 +1,4 @@
-*{
+/* *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -28,6 +28,8 @@ body{
     width: 70vw;
     margin: 20px auto;
     background-color: rgb(200, 200, 250);
+}
+.border{
     border: rgb(100, 100, 150) 2px solid;
 }
 .list-container ul{
@@ -50,4 +52,25 @@ body{
     .list-container ul{
         grid-template-columns: 1fr 1fr;
     }
+} */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+li{
+    clear: both;
+    margin-top: 20px;
+}
+img{
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+}
+strong{
+    font-size: 20px;
+}
+p{
+    margin: 5px 0;
 }
