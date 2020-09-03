@@ -1,8 +1,17 @@
-# Consulta-API-github
-Criei esse código para fazer consulta na api do github
-E exibir em uma lista os repositórios do usuário.
+# **Sobre:** 
+Criei esse código para fazer consulta na api do github e exibir em uma lista os repositórios do usuário.
+Apliquei os conceitos de ES6 no codigo.
 
-Vou configurar o babel para converter o codigo ES6+ em codigo lido pelo navegador.
+# ** :computer: Tecnologias utilizadas:**
+
+- HTML
+- CSS
+- ES6
+- Axios
+- Babel
+- Webpack
+
+# ** :pick: Configurações:**
 
 Necessario instalar as seguintes de pendencias:
     "dependencies": {
@@ -49,3 +58,4 @@ configuracoes para o webpack:
             ],
         },
     };
+ 
